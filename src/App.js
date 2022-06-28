@@ -56,21 +56,10 @@ function App() {
 
   return (
     <>
-      <Router>
-        <Header title={"Todos List"} />
-        <Routes>
-        <Route path="/about">
-            <About />
-          </Route>
-          
-          <Route path='/add' element={<Addtodo addTodo={addTodo} />}/>
-            
-        <Route path='/' element={<Todos todos={todos} onDelete={onDelete} />}/>
-          
-
-        </Routes>
-        <Footer />
-      </Router>
+      <Header title={"Todos List"} />
+      <Addtodo addTodo={addTodo} />
+      <Todos todos={todos} onDelete={onDelete} />
+      <Footer />
     </>
   );
 }
