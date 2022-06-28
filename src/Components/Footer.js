@@ -6,7 +6,9 @@ export const Footer = () => {
       <p className="text-center">
            Copyright &copy; MyTodoslist.com
       </p>
-      
+      <p className="text-center">
+        Built by Zaid
+    </p>
     </footer>
   )
 }
