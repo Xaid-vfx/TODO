@@ -8,9 +8,9 @@ import { Addtodo } from "./Components/Addtodo";
 import { About } from "./Components/About";
 import {
   BrowserRouter as Router,
-  Route,
+  Route,Routes
 } from "react-router-dom";
-import { Switch } from 'react-router-dom';
+// import { Switch } from 'react-router-dom';
 
 
 function App() {
@@ -58,21 +58,17 @@ function App() {
     <>
       <Router>
         <Header title={"Todos List"} />
-        <Switch>
-          <Route exact path="/" render={() => {
-            return (
-              <>
-                <Addtodo addTodo={addTodo} />
-                <Todos todos={todos} onDelete={onDelete} />
-              </>
-            )
-          }}>
-          </Route>
-          <Route exact path="/about">
+        <Routes>
+        <Route path="/about">
             <About />
           </Route>
+          
+          <Route path='/add' element={<Addtodo addTodo={addTodo} />}/>
+            
+        <Route path='/' element={<Todos todos={todos} onDelete={onDelete} />}/>
+          
 
-        </Switch>
+        </Routes>
         <Footer />
       </Router>
     </>
