@@ -4,11 +4,8 @@ export const Footer = () => {
   return (
     <footer className='bg-dark py-3 text-light'>
       <p className="text-center">
-           Copyright &copy; MyTodoslist.com
+           Copyright &copy; Zaid
       </p>
-      <p className="text-center">
-        Built by Zaid
-    </p>
     </footer>
   )
 }
